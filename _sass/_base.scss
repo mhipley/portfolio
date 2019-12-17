@@ -1,0 +1,294 @@
+// BRANDING
+
+$hotpink: #FF0B87;
+$pink: #F0BBD6;
+$navy: #223249;
+
+
+html {
+	scroll-behavior: smooth;
+	font-family: 'porporaregular';
+	font-size: 16px;
+
+	width: 100vw;
+	height: 100vh;
+	background-image: url('/assets/images/background.svg');
+	background-size: cover;
+	background-attachment: fixed;
+	color: $navy;
+
+	h1, h2, h3, h4, h5 {
+		margin: 0;
+	}
+
+
+	h1 {
+		font-family: 'mazius';
+		font-size: 3.5rem;
+		line-height: 3.2rem;
+		margin: 1rem 0;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+	}
+
+	h5 {
+		font-size: .8rem;
+	}
+
+	a {
+		color: $navy;
+		text-decoration: none;
+		&:hover {
+			color: $hotpink;
+		}
+		&:active {
+			color: $navy;
+		}
+		&:focus {
+			outline: 1px dashed $pink;
+		}
+	}
+
+	strong {
+		background-color: $pink;
+		padding: 0 5px;
+	}
+
+	.content {
+		line-height: 1.8rem;
+		a {
+			border-bottom: 4px solid $pink;
+			&:hover {
+				border-bottom: 4px solid $hotpink;
+			}
+		}
+		img {
+			max-width: 100%;
+		}
+		.device a {
+			border-bottom: 0;
+		}
+	}
+	hr {
+			border-top: 1px dashed $navy;
+	margin-bottom: 2rem;
+	}
+
+	blockquote, iframe, twitter-widget {
+		margin: 1rem 0 !important;
+	}
+
+
+}
+
+
+// DEVICE WRAPPERS
+
+.device {
+	margin: 1rem 0;
+}
+
+.border-mobile {
+    border: solid;
+    border-image-source: url(/assets/images/device-mobile.svg);
+    border-image-slice: 10.5% 7.2%;
+    border-width: 33.5px 12px;
+
+}
+
+.border-desktop {
+    border: solid;
+    border-image-source: url(/assets/images/device-desktop.svg);
+    border-image-slice: 9% 13.5% 17.6%;
+    border-width: 47px 125px 92px 125px;
+
+	@media (max-width: 48em) {
+		border-width: 23.5px 62.5px 46px 62.5px;
+	}    
+}
+
+.border-frame {
+    border: solid;
+    border-image-source: url(/assets/images/device-frame.svg);
+    border-image-slice: 17.5% 11.8% 13.8%;
+    border-width: 51px 38.5px 39.5px 38.5px;
+}
+
+.border-vr {
+    border: solid;
+    border-image-source: url(/assets/images/device-vr.svg);
+	border-image-slice: 14% 9.2% 21.5%;
+    border-width: 37px 32px 48.5px 37px;
+}
+
+.device-interior {
+	width: 100%;
+	height: 100%;
+	background: white;
+	display: block;
+}
+
+
+
+// POST STYLES
+
+.categories {
+	list-style: none;
+	padding: 1rem 0 0 0 ;
+	margin: 0;
+	li {
+		display: inline-block;
+
+		font-size: 4rem;
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.keywords {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 1rem 0;
+	li {
+		display: inline-block;
+		&:after {
+			content: "/";
+		}
+		&:last-child {
+			&:after {
+				content: "";
+			}
+
+		}
+
+	}
+}
+
+.glance {
+	margin: 0;
+	padding: 0 0 1rem 0;
+	li {
+		display: block;
+		&::before {
+			content: "⋆";
+		}
+	}
+}
+
+.sidebar {
+	hr {
+	display: none;
+
+	@media (max-width: 48em) {
+		display: block;
+	}
+
+
+
+	}
+	h4 {
+		margin-bottom: 0;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0 0 1rem 0;
+	}
+	a:visited {
+		text-decoration: line-through !important;
+	}	
+
+	.categories {
+		width: 100%;
+		position: relative;
+		margin-top: 1rem;
+		li {
+			position: relative;}
+		.icon {
+			font-size: 80%;
+		}
+	}
+	.highlighted, .highlighted a {
+		color: $hotpink !important;
+	    -webkit-transition: all 0.5s ease;
+	    -moz-transition: all 0.5s ease;
+	    -o-transition: all 0.5s ease;
+	    transition: all 0.5s ease;		
+	}	
+}
+
+.back {
+	text-decoration: none !important;
+	.icon {
+		padding-top: 1rem;
+	}
+}
+
+.features {
+	img {
+		padding: 1rem 0;
+	}
+}
+
+.portrait {
+	width: calc(100% - 150px);
+	margin-bottom: 1rem;
+}
+
+.coming-soon {
+	position: relative;
+	&:hover {
+		&::before {
+			font-family: 'mazius';
+			font-size: 3.5rem;		
+			position: absolute;	
+			width: 100%;
+			text-align: center;
+			color: $hotpink;	
+			content: "COMING SOON";
+			top: calc(30%);
+			  -webkit-transform: rotate(20deg);
+			  -moz-transform: rotate(20deg);
+			  -o-transform: rotate(20deg);
+			  -ms-transform: rotate(20deg);
+			  transform: rotate(20deg);			
+		}
+	}
+}
+
+.social-links {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0;
+	li {
+		display: inline-block;
+		font-size: 1.5rem;
+		margin-right: 1rem;
+		a {
+			text-decoration: none;
+			&:hover {
+				color: $hotpink;
+			}
+		}
+	}
+}
+
+.scroll {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	display: none;
+	@media (max-width: 48em) {
+		display: block;
+	}
+}

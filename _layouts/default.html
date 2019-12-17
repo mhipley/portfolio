@@ -1,0 +1,57 @@
+{% include header.html %}
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+              <a href="/" class="back"><div class="icon icon-arrow-left"></div></a>
+              <a href="#project" class="scroll">(scroll to project)</a>
+              <h1>work samples</h1>
+              
+        </div>
+
+      </div>
+
+      <div class="row">
+        {% include sidebar.html %}
+        <div class="col-xs-12 col-sm-8 content" id="project">
+            <h3>{{ page.client }}</h3>
+            <h2>{{ page.title }}</h2>
+            <h3>{{ page.time }}</h3>
+
+            <ul class="categories">
+              {% for category in page.categories %}
+                <li><div class="icon icon-{{category}}" title="{{category}}" alt="{{category}}"></div></li>
+              {% endfor %}
+            </ul>
+
+            {% if page.tags %}
+            <h5>Keywords:</h5>
+            <ul class="keywords">
+            {% for keyword in page.tags %}
+              <li> {{ keyword }} </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+          {% if page.glance %}
+            <h5>At a glance:</h5>
+            <ul class="glance">
+            {% for callout in page.glance %}
+              <li>
+              {{ callout }}
+              </li> 
+            {% endfor %}
+
+            </ul>
+
+          {% endif %}
+
+            {{ content }}
+
+          </div>
+
+      </div>
+    </div>
+  </body>
+
+{% include footer.html %}

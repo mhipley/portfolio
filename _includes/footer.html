@@ -1,0 +1,19 @@
+  <script>
+  $( document ).ready(function() {
+    var highlighted = null;
+    $( ".category-highlight" ).click(function() {
+      $( ".highlighted" ).removeClass( "highlighted" );
+      var highlighted = $(this).attr("id");
+      $(this).addClass( "highlighted" );
+      var target = ".sidebar ." + highlighted;
+      $(target).each(function() {
+        $(this).addClass( "highlighted" );
+      });    
+
+
+    });
+
+
+  });
+  </script>
+</html>

@@ -1,0 +1,42 @@
+{% include header.html %}
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="/" class="back"><div class="icon icon-arrow-left"></div></a>
+              <h1>{{ page.title }}</h1>
+              
+        </div>
+
+      </div>
+
+      <div class="row">
+          <div class=" col-xs-12 col-sm-4">
+            <div class="border-frame portrait">
+              <img class="device-interior" src="/assets/images/me.jpg" alt="photo of Martha Hipley">
+            </div>
+
+            <a href="mailto:info@marthahipley.com">info@marthahipley.com</a>
+            <ul class="social-links">
+              <li><a href="https://twitter.com/everyartisugly/" target='_blank'><div alt="@everyartisugly on twitter" class="icon icon-twitter" title="ok I no twitter is a cesspool but idk I still have to promote my newsletter"></div></a></li>
+              <li><a href="https://instagram.com/everyoneisugly/" target='_blank'><div title="my instagram is public but do not be a creep! u prob shouldn't DM me!!!" alt="@everyoneisugly on instagram" class="icon icon-instagram"></div></a></li>
+              <li><a href="https://www.linkedin.com/in/marthahipley/" target='_blank'><div alt="/mhipley on linkedin" class="icon icon-linkedin"></div></a></li>           
+              <li><a href="https://github.com/mhipley" target='_blank'><div alt="mhipley on github" class="icon icon-github"></div></a></li>                     
+            </ul>
+
+
+
+          </div>        
+          <div class=" col-xs-12 col-sm-8 content">
+            {{ content }}
+
+
+          </div>
+
+      </div>
+    </div>
+  </body>
+</html>
+
+{% include footer.html %}

@@ -1,0 +1,1 @@
+Hi! This is the source code for marthahipley.com. If you want to see how I've structured my site & implemented Jekyll, maybe this is interesting to you!
