@@ -12,9 +12,32 @@ html {
 
 	width: 100vw;
 	height: 100vh;
-	background-image: url('/assets/images/background.svg');
-	background-size: cover;
-	background-attachment: fixed;
+	// background-image: url('/assets/images/background.svg');
+	// background-size: cover;
+	// background-attachment: fixed;
+
+	.bg-overlay {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: -1;
+		mix-blend-mode: multiply;
+		background-color: $hotpink;
+		margin: 0;
+		padding: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		opacity: .3;
+		img {
+			mix-blend-mode: hard-light;
+			width: 100%;
+			height: 100%;
+
+		}
+	}
+
 	color: $navy;
 
 	h1, h2, h3, h4, h5 {
