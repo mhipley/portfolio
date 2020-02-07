@@ -26,7 +26,7 @@ html.with-featherlight {
 
 /* support for nested featherlights. Does not work in IE8 (use JS to fix) */
 .featherlight:last-of-type {
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(255, 11, 135, .7);
 }
 
 .featherlight:before {
@@ -57,10 +57,11 @@ html.with-featherlight {
 	max-height: 95%;
 
 	/* styling */
-	background-image: url('/assets/images/background.svg');
-	background-size: cover;
-	background-attachment: fixed;
-	background-color: white;
+	// background-image: url('/assets/images/background.svg');
+	// background-size: cover;
+	// background-attachment: fixed;
+	background-color: #fff;
+	border: 1px dotted #FF0B87;
 	cursor: auto;
 
 	/* reset white-space wrapping */
@@ -95,8 +96,7 @@ html.with-featherlight {
 	cursor: pointer;
 	text-align: center;
 	font-family: Arial, sans-serif;
-	background: #fff; /* Set the background in case it overlaps the content */
-	background: rgba(255, 255, 255, 0.3);
+	background: #fff;
 	color: #000;
 	border: none;
 	padding: 0;
